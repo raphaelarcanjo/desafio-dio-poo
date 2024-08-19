@@ -1,0 +1,24 @@
+@startuml
+
+interface ReprodutorMusical {
+    +exemploMetodo1()
+    +exemploMetodo2(String exemplo)
+}
+
+interface AparelhoTelefonico {
+    +exemploMetodo1()
+    +exemploMetodo2(String exemplo)
+}
+
+interface NavegadorInternet {
+    +exemploMetodo1()
+    +exemploMetodo2(String exemplo)
+}
+
+class Iphone {}
+
+Iphone --> ReprodutorMusical
+Iphone --> AparelhoTelefonico
+Iphone --> NavegadorInternet
+
+@enduml
