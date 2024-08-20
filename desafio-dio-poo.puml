@@ -1,29 +1,32 @@
 /**
  * This PlantUML diagram defines three interfaces - `ReprodutorMusical`, `AparelhoTelefonico`, and `NavegadorInternet` - and a class `Iphone` that implements these interfaces.
- * The `Iphone` class represents a smartphone that has the capabilities of a music player, a telephone, and a web browser.
- * The interfaces define example methods that the `Iphone` class must implement to provide these functionalities.
+ * The `IPhone` class represents a smartphone that has the capabilities of a music player, a telephone, and a web browser.
+ * The interfaces define example methods that the `IPhone` class must implement to provide these functionalities.
  */
 @startuml IPhone
 
 interface ReprodutorMusical {
-    +exemploMetodo1()
-    +exemploMetodo2(String exemplo)
+    +tocar();
+    +pausar();
+    +selecionarMusica(String musica);
 }
 
 interface AparelhoTelefonico {
-    +exemploMetodo1()
-    +exemploMetodo2(String exemplo)
+    +ligar(String numero);
+    +atender();
+    +iniciarCorreioVoz();
 }
 
 interface NavegadorInternet {
-    +exemploMetodo1()
-    +exemploMetodo2(String exemplo)
+    +exibirPagina(String url);
+    +adicionarNovaAba();
+    +atualizarPagina();
 }
 
-class Iphone {}
+class IPhone {}
 
-Iphone --> ReprodutorMusical
-Iphone --> AparelhoTelefonico
-Iphone --> NavegadorInternet
+IPhone -> ReprodutorMusical
+IPhone -> AparelhoTelefonico
+IPhone -> NavegadorInternet
 
 @enduml
